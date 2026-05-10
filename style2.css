@@ -2352,7 +2352,7 @@ poiner-events: none;
   background-color: #2e2228;
   border-bottom: 3px solid #000;
   outline: 3px solid red;
-  height: 1400px; /* MAIN PAGE: Adjust page height here - should be container height + 300px buffer */
+  height: 1500px; /* MAIN PAGE: Adjust page height here - should be container height + 300px buffer */
 }
 /**/
 .heading {
@@ -2385,7 +2385,7 @@ poiner-events: none;
   border: 3px solid #110b0b;
   border-radius: 40px;
   width: 750px;
-  height: 1150px; /* MAIN PAGE CONTAINER: Adjust height here, then update .body height above */
+  height: 1250px; /* MAIN PAGE CONTAINER: Adjust height here, then update .body height above */
   margin-top: 70px;
   margin-bottom: 70px; /* ADJUSTABLE: Space below the main container (distance from copyright to footer) - change value here */
   margin-left: auto;
@@ -2587,13 +2587,25 @@ poiner-events: none;
   font-family: Consolas, Georgia, sans-serif;
   font-size: 20px;
 }
-/**/
+
+/*index squiggle*/
+.image-6 {
+  z-index: 100;
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+  width: 200px;
+  position: absolute;
+  left: 28px;
+  top: 340px;
+}
+/*squiggle*/
 .image-5 {
   z-index: 100;
   mix-blend-mode: multiply;
+  opacity: 0.6;
   width: 200px;
   position: absolute;
-  top: 92px;
+  top: 93px;
   left: 23px;
 }
 /**/
@@ -2828,14 +2840,24 @@ poiner-events: none;
   .container-6 {
     margin-top: 220px;
   }
-/* squiggle */
+
+/*index squiggle*/
+.image-6 {
+  z-index: 100;
+  mix-blend-mode: multiply;
+  width: 200px;
+  position: absolute;
+  top: 93px;
+  left: 23px;
+}
+/* squiggle second stuff */
   .image-5 {
     z-index: 100;
     opacity: .59;
     mix-blend-mode: multiply;
     width: 000px;
     position: absolute;
-    top: 340px;
+    top: 336px;
     left: 14px;
   }
 /* collection stack left */
@@ -3050,9 +3072,7 @@ poiner-events: none;
     padding-left: 0;
   }
 
-  .image-5 {
-    margin-top: 8px;
-  }
+  
 
   .text-field {
     width: 600px;
@@ -3175,11 +3195,7 @@ poiner-events: none;
     font-size: 15px;
   }
 
-  .image-5 {
-    width: 120px;
-    margin-top: -60px;
-    top: 424px;
-  }
+  
 
   .cell-5 {
     grid-column-gap: 0px;
@@ -3359,3 +3375,5 @@ html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
     height: 2800px; /* ABSURD PAGE CONTAINER MOBILE: Adjust container height for mobile */
   }
 }
+
+

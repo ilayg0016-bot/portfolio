@@ -2338,7 +2338,7 @@ textarea.w-input, textarea.w-select {
   border: 3px solid #110b0b;
   border-radius: 40px;
   width: 750px;
-  height: 1150px; /* MAIN PAGE CONTAINER: Adjust height here, then update .body height above */
+  height: 1250px; /* MAIN PAGE CONTAINER: Adjust height here, then update .body height above */
   margin-top: 70px;
   margin-bottom: 70px; /* ADJUSTABLE: Space below the main container (distance from copyright to footer) - change value here */
   margin-left: auto;
@@ -2556,14 +2556,7 @@ textarea.w-input, textarea.w-select {
   font-size: 20px;
 }
 
-.image-5 {
-  z-index: 100;
-  mix-blend-mode: multiply;
-  width: 200px;
-  position: absolute;
-  top: 92px;
-  left: 23px;
-}
+
 
 .cell-5 {
   background-color: #60435f;
@@ -2792,16 +2785,7 @@ textarea.w-input, textarea.w-select {
   .container-6 {
     margin-top: 220px;
   }
-/* squiggle */
-  .image-5 {
-    z-index: 100;
-    opacity: .59;
-    mix-blend-mode: multiply;
-    width: 200px;
-    position: absolute;
-    top: 340px;
-    left: 14px;
-  }
+
 /* collection stack left */
   .cell-5 {
     grid-column-gap: 5px;
@@ -2956,7 +2940,7 @@ textarea.w-input, textarea.w-select {
 /* welcome container meow*/
   .container-4 {
     width: 650px;
-    padding-top: 10px;
+    padding-top: 0px;
     left: 50%;
     transform: translateX(-50%);
     right: auto;
@@ -3017,9 +3001,7 @@ textarea.w-input, textarea.w-select {
     padding-left: 0;
   }
 
-  .image-5 {
-    margin-top: 8px;
-  }
+  
 
   .text-field {
     width: 600px;
@@ -3142,11 +3124,7 @@ textarea.w-input, textarea.w-select {
     font-size: 15px;
   }
 
-  .image-5 {
-    width: 120px;
-    margin-top: -60px;
-    top: 424px;
-  }
+  
 
   .cell-5 {
     grid-column-gap: 0px;
@@ -3284,53 +3262,6 @@ textarea.w-input, textarea.w-select {
   }
 }
 
-/* ===== ABSURD PAGE SPECIFIC SIZES ===== */
-/* Page ID: 69fd9ebabeddd5210b8a8e7d */
-html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .body {
-
-  height: 5250px; /* ABSURD PAGE: Adjust page height here - should be container height + 300px buffer */
-}
-
-html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
-  margin-top: 20px;
-  height: 3000px; /* ABSURD PAGE CONTAINER: Adjust height here, then update .body height above */
-}
-
-/* Tablet/Medium responsive for absurd page */
-@media screen and (max-width: 991px) {
-  html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .body {
-    height: 4300px; /* ABSURD PAGE TABLET: Adjust height for tablets */
-  }
-
-  html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
-    margin-top: 20px;
-    height: 4000px; /* ABSURD PAGE CONTAINER TABLET: Adjust container height for tablets */
-  }
-}
-
-/* Small/Tablet responsive for absurd page */
-@media screen and (max-width: 767px) {
-  html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .body {
-    height: 3700px; /* ABSURD PAGE SMALL: Adjust height for small devices */
-  }
-
-  html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
-    margin-top: 20px;
-    height: 3400px; /* ABSURD PAGE CONTAINER SMALL: Adjust container height for small devices */
-  }
-}
-
-/* Mobile responsive for absurd page */
-@media screen and (max-width: 479px) {
-  html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .body {
-    height: 4900px; /* ABSURD PAGE MOBILE: Adjust height for mobile */
-  }
-
-  html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
-    margin-top: 20px;
-    height: 4600px; /* ABSURD PAGE CONTAINER MOBILE: Adjust container height for mobile */
-  }
-}
 
 /* ===== PAGE-SPECIFIC SIZES: INDEX ===== */
 body.page-index .body {
@@ -3338,7 +3269,7 @@ body.page-index .body {
 }
 
 body.page-index .div-block {
-  height: 1150px; /* MAIN PAGE CONTAINER: Adjust height here, then update .body height above */
+  height: 1250px; /* MAIN PAGE CONTAINER: Adjust height here, then update .body height above */
 }
 
 @media screen and (max-width: 991px) {
@@ -3347,13 +3278,13 @@ body.page-index .div-block {
   }
 
   body.page-index .div-block {
-    height: 1150px; /* MAIN PAGE CONTAINER TABLET: Adjust height */
+    height: 1250px; /* MAIN PAGE CONTAINER TABLET: Adjust height */
   }
 }
 
 @media screen and (max-width: 767px) {
   body.page-index .body {
-    height: 1500px; /* MAIN PAGE SMALL: Adjust height for smaller devices */
+    height: 1000px; /* MAIN PAGE SMALL: Adjust height for smaller devices */
   }
 
   body.page-index .div-block {
@@ -3368,45 +3299,6 @@ body.page-index .div-block {
 
   body.page-index .div-block {
     height: 3200px; /* MAIN PAGE CONTAINER MOBILE: Adjust height for mobile */
-  }
-}
-
-/* ===== PAGE-SPECIFIC SIZES: INDEX2 ===== */
-body.page-index2 .body {
-  height: 1500px; /* INDEX2 PAGE: Adjust page height here - should be container height + 300px buffer */
-}
-
-body.page-index2 .div-block {
-  height: 1150px; /* INDEX2 PAGE CONTAINER: Adjust height here, then update .body height above */
-}
-
-@media screen and (max-width: 991px) {
-  body.page-index2 .body {
-    height: 1400px; /* INDEX2 PAGE TABLET: Adjust page height */
-  }
-
-  body.page-index2 .div-block {
-    height: 1150px; /* INDEX2 PAGE CONTAINER TABLET: Adjust height */
-  }
-}
-
-@media screen and (max-width: 767px) {
-  body.page-index2 .body {
-    height: 1500px; /* INDEX2 PAGE SMALL: Adjust height for smaller devices */
-  }
-
-  body.page-index2 .div-block {
-    height: 1200px; /* INDEX2 PAGE CONTAINER SMALL: Adjust height for smaller devices */
-  }
-}
-
-@media screen and (max-width: 479px) {
-  body.page-index2 .body {
-    height: 3400px; /* INDEX2 PAGE MOBILE: Adjust height for mobile */
-  }
-
-  body.page-index2 .div-block {
-    height: 3200px; /* INDEX2 PAGE CONTAINER MOBILE: Adjust height for mobile */
   }
 }
 
@@ -3670,7 +3562,7 @@ body.page-poems-poets .div-block {
 
 /* ===== PAGE-SPECIFIC SIZES: BETTER PERSON ===== */
 body.page-better-person .body {
-  height: 3250px; /* BETTER PERSON PAGE: Adjust page height here - should be container height + 300px buffer */
+  height: 1450px; /* BETTER PERSON PAGE: Adjust page height here - should be container height + 300px buffer */
 }
 
 body.page-better-person .div-block {
@@ -3680,45 +3572,45 @@ body.page-better-person .div-block {
 
 @media screen and (max-width: 991px) {
   body.page-better-person .body {
-    height: 4300px; /* BETTER PERSON PAGE TABLET: Adjust height for tablets */
+    height: 1450; /* BETTER PERSON PAGE TABLET: Adjust height for tablets */
   }
 
   body.page-better-person .div-block {
     margin-top: 20px;
-    height: 4000px; /* BETTER PERSON PAGE CONTAINER TABLET: Adjust container height for tablets */
+    height: 1150; /* BETTER PERSON PAGE CONTAINER TABLET: Adjust container height for tablets */
   }
 }
 
 @media screen and (max-width: 767px) {
   body.page-better-person .body {
-    height: 3700px; /* BETTER PERSON PAGE SMALL: Adjust height for small devices */
+    height: 1450; /* BETTER PERSON PAGE SMALL: Adjust height for small devices */
   }
 
   body.page-better-person .div-block {
     margin-top: 20px;
-    height: 3400px; /* BETTER PERSON PAGE CONTAINER SMALL: Adjust container height for small devices */
+    height: 1150; /* BETTER PERSON PAGE CONTAINER SMALL: Adjust container height for small devices */
   }
 }
 
 @media screen and (max-width: 479px) {
   body.page-better-person .body {
-    height: 4900px; /* BETTER PERSON PAGE MOBILE: Adjust height for mobile */
+    height: 1450; /* BETTER PERSON PAGE MOBILE: Adjust height for mobile */
   }
 
   body.page-better-person .div-block {
     margin-top: 20px;
-    height: 4600px; /* BETTER PERSON PAGE CONTAINER MOBILE: Adjust container height for mobile */
+    height: 1150; /* BETTER PERSON PAGE CONTAINER MOBILE: Adjust container height for mobile */
   }
 }
 
 /* ===== PAGE-SPECIFIC SIZES: BLUES REDS ===== */
 body.page-blues-reds .body {
   margin-top: 20px;
-  height: 3250px; /* BLUES REDS PAGE: Adjust page height here - should be container height + 300px buffer */
+  height: 1450; /* BLUES REDS PAGE: Adjust page height here - should be container height + 300px buffer */
 }
 
 body.page-blues-reds .div-block {
-  margin-top: 20px;
+  margin-top: 40px;
   height: 1070px; /* BLUES REDS PAGE CONTAINER: Adjust height here, then update .body height above */
 }
 
@@ -4012,3 +3904,5 @@ body.page-overflow .div-block {
     height: 4600px; /* OVERFLOW PAGE CONTAINER MOBILE: Adjust container height for mobile */
   }
 }
+
+
