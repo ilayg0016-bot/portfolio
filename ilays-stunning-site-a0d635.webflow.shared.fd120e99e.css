@@ -2,6 +2,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -2304,7 +2305,7 @@ textarea.w-input, textarea.w-select {
   background-color: #2e2228;
   border-bottom: 3px solid #000;
   outline: 3px solid red;
-  height: 3300px;
+  height: 1500px; /* MAIN PAGE: Adjust page height here - should be container height + 300px buffer */
 }
 
 .heading {
@@ -2337,8 +2338,9 @@ textarea.w-input, textarea.w-select {
   border: 3px solid #110b0b;
   border-radius: 40px;
   width: 750px;
-  height: 3000px;
+  height: 1150px; /* MAIN PAGE CONTAINER: Adjust height here, then update .body height above */
   margin-top: 70px;
+  margin-bottom: 70px; /* ADJUSTABLE: Space below the main container (distance from copyright to footer) - change value here */
   margin-left: auto;
   margin-right: auto;
   padding-top: 0;
@@ -2742,12 +2744,13 @@ textarea.w-input, textarea.w-select {
   }
 
   .body {
-    height: 3200px;
+    height: 1400px; /* MAIN PAGE TABLET: Adjust page height - should match container height + 200px */
   }
 
   .div-block {
-    height: 3000px;
+    height: 1150px; /* MAIN PAGE CONTAINER TABLET: Adjust container height here, then update .body above */
     margin-top: 60px;
+    margin-bottom: 70px; /* ADJUSTABLE: Tablet/medium devices - space below container */
   }
 
   .quick-stack-2 {
@@ -2937,17 +2940,18 @@ textarea.w-input, textarea.w-select {
   .mobile-margin-top-10 {
     margin-top: 10px;
   }
-/* page */
+/* page meow*/
   .body {
-    height: 1400px;
+    height: 1500px;
   }
-/* div block */
+/* div block meow*/
   .div-block {
     width: 650px;
     height: 1200px;
     margin-top: 92px;
+    margin-bottom: 70px; /* ADJUSTABLE: Small/tablet devices - space below container */
   }
-/* welcome container */
+/* welcome container meow*/
   .container-4 {
     width: 650px;
     left: 50%;
@@ -3048,6 +3052,7 @@ textarea.w-input, textarea.w-select {
     width: 360px;
     height: 3200px;
     margin-top: 60px;
+    margin-bottom: 70px; /* ADJUSTABLE: Mobile devices - space below container */
   }
 
   .heading-2 {
@@ -3273,5 +3278,48 @@ textarea.w-input, textarea.w-select {
 
   #w-node-_83fca108-a210-63e1-e1df-b60eb48e1dcd-be0e28fa {
     display: grid;
+  }
+}
+
+/* ===== ABSURD PAGE SPECIFIC SIZES ===== */
+/* Page ID: 69fd9ebabeddd5210b8a8e7d */
+html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .body {
+  height: 4300px; /* ABSURD PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
+  height: 4000px; /* ABSURD PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+/* Tablet/Medium responsive for absurd page */
+@media screen and (max-width: 991px) {
+  html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .body {
+    height: 4300px; /* ABSURD PAGE TABLET: Adjust height for tablets */
+  }
+
+  html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
+    height: 4000px; /* ABSURD PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+/* Small/Tablet responsive for absurd page */
+@media screen and (max-width: 767px) {
+  html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .body {
+    height: 3700px; /* ABSURD PAGE SMALL: Adjust height for small devices */
+  }
+
+  html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
+    height: 3400px; /* ABSURD PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+/* Mobile responsive for absurd page */
+@media screen and (max-width: 479px) {
+  html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .body {
+    height: 4900px; /* ABSURD PAGE MOBILE: Adjust height for mobile */
+  }
+
+  html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
+    height: 4600px; /* ABSURD PAGE CONTAINER MOBILE: Adjust container height for mobile */
   }
 }
