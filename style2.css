@@ -1162,6 +1162,56 @@ textarea.w-input, textarea.w-select {
   overflow: hidden;
 }
 
+.back-button {
+position:absolute;
+top: 10px;
+left: 10px;
+font-family: Consolas, Georgia, sans-serif;
+color: #2e2228;
+opacity: 0.83;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #2e2228;
+
+font-size: 20px;
+text-decoration: underline;
+
+
+}
+.note {
+position:absolute;
+top: 68px;
+left: 65px;
+font-family: Consolas, Georgia, sans-serif;
+color: #2e2228;
+opacity: 0.63;
+font-size: 15px;
+poiner-events: none;
+
+}
+
+.text-link,
+.text-link2 {
+  position: fixed;
+  top: var(--nav-arrow-top) !important; /* Vertical position for both page arrows */
+  font-family: Consolas, Georgia, sans-serif;
+  font-size: 40px;
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 0 0 3px rgb(49, 49, 49);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffe3ea;
+  z-index: 1000;
+}
+.text-link {
+  color: #ffe3ea;
+  right: var(--nav-arrow-left-right); /* Horizontal position for the left arrow */
+}
+.text-link2 {
+  color: #ffe3ea;
+  right: var(--nav-arrow-right-right); /* Horizontal position for the right arrow */
+}
+
+
 .w-background-video > video {
   object-fit: cover;
   z-index: -100;
