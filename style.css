@@ -3713,6 +3713,7 @@ body.page-better-person .div-block {
 
 /* ===== PAGE-SPECIFIC SIZES: BLUES REDS ===== */
 body.page-blues-reds .body {
+  margin-top: 20px;
   height: 3250px; /* BLUES REDS PAGE: Adjust page height here - should be container height + 300px buffer */
 }
 
