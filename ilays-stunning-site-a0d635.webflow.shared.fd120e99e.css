@@ -179,16 +179,7 @@ td, th {
   font-style: normal;
 }
 
-[class^="w-icon-"], [class*=" w-icon-"] {
-  font-variant: normal;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  font-family: webflow-icons !important;
-}
+
 
 .w-icon-slider-right:before {
   content: "";
@@ -302,87 +293,96 @@ pre.w-code-block code > span {
   display: contents;
 }
 
-.w-webflow-badge, .w-webflow-badge > img {
-  box-sizing: unset;
-  width: unset;
-  height: unset;
-  max-height: unset;
-  max-width: unset;
-  min-height: unset;
-  min-width: unset;
-  margin: unset;
-  padding: unset;
-  float: unset;
-  clear: unset;
-  border: unset;
-  border-radius: unset;
-  background: unset;
-  background-image: unset;
-  background-position: unset;
-  background-size: unset;
-  background-repeat: unset;
-  background-origin: unset;
-  background-clip: unset;
-  background-attachment: unset;
-  background-color: unset;
-  box-shadow: unset;
-  transform: unset;
-  direction: unset;
-  font-family: unset;
-  font-weight: unset;
-  color: unset;
-  font-size: unset;
-  line-height: unset;
-  font-style: unset;
-  font-variant: unset;
-  text-align: unset;
-  letter-spacing: unset;
-  -webkit-text-decoration: unset;
-  text-decoration: unset;
-  text-indent: unset;
-  text-transform: unset;
-  list-style-type: unset;
-  text-shadow: unset;
-  vertical-align: unset;
-  cursor: unset;
-  white-space: unset;
-  word-break: unset;
-  word-spacing: unset;
-  word-wrap: unset;
-  transition: unset;
+.back-button {
+position:absolute;
+top: 10px;
+left: 10px;
+font-family: Consolas, Georgia, sans-serif;
+color: #2e2228;
+opacity: 0.83;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #2e2228;
+
+font-size: 20px;
+text-decoration: underline;
+
+
+}
+.note {
+position:absolute;
+top: 68px;
+left: 65px;
+font-family: Consolas, Georgia, sans-serif;
+color: #2e2228;
+opacity: 0.63;
+font-size: 15px;
+poiner-events: none;
+
 }
 
-.w-webflow-badge {
-  white-space: nowrap;
+.collection {
+position:absolute;
+top: 30px;
+left: 10px;
+font-family: Consolas, Georgia, sans-serif;
+color: #2e2228;
+opacity: 0.73;
+font-size: 15px;
+pointer-events: none;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #2e2228;
+word-spacing: -3px;
+letter-spacing: -1px;
+
+}
+
+/*meow text link*/
+:root {
+  /* Arrow button positions for all devices */
+  --nav-arrow-top: 220px; /* Adjust this value to move the page arrows up/down globally */
+  --nav-arrow-left-right: 80px; /* Adjust this value to move the left arrow horizontally */
+  --nav-arrow-right-right: 54px; /* Adjust this value to move the right arrow horizontally */
+}
+.text-link,
+.text-link2 {
+  position: fixed;
+  top: var(--nav-arrow-top) !important; /* Vertical position for both page arrows */
+  font-family: Consolas, Georgia, sans-serif;
+  font-size: 40px;
+  text-decoration: none;
   cursor: pointer;
-  box-shadow: 0 0 0 1px #0000001a, 0 1px 3px #0000001a;
-  visibility: visible !important;
-  opacity: 1 !important;
-  z-index: 2147483647 !important;
-  color: #aaadb0 !important;
-  width: auto !important;
-  height: auto !important;
-  overflow: unset !important;
-  background-color: #fff !important;
-  border-radius: 3px !important;
-  margin: 0 !important;
-  padding: 6px !important;
-  font-size: 12px !important;
-  line-height: 14px !important;
-  text-decoration: none !important;
-  display: inline-block !important;
-  position: fixed !important;
-  inset: auto 12px 12px auto !important;
-  transform: none !important;
+  text-shadow: 0 0 3px rgb(49, 49, 49);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffe3ea;
+  z-index: 1000;
+}
+.text-link {
+  color: #ffe3ea;
+  right: var(--nav-arrow-left-right); /* Horizontal position for the left arrow */
+}
+.text-link2 {
+  color: #ffe3ea;
+  right: var(--nav-arrow-right-right); /* Horizontal position for the right arrow */
 }
 
-.w-webflow-badge > img {
-  position: unset;
-  visibility: unset !important;
-  opacity: 1 !important;
-  vertical-align: middle !important;
-  display: inline-block !important;
+/* Responsive arrow adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  :root {
+    --nav-arrow-top: 180px;
+    --nav-arrow-left-right: 60px;
+    --nav-arrow-right-right: 34px;
+  }
 }
+@media screen and (max-width: 480px) {
+  :root {
+    --nav-arrow-top: 160px;
+    --nav-arrow-left-right: 50px;
+    --nav-arrow-right-right: 24px;
+  }
+}
+
+
+
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
@@ -2897,6 +2897,8 @@ textarea.w-input, textarea.w-select {
     padding-bottom: 30px;
   }
 
+
+  }
   .nav-menu-block {
     flex-direction: column;
   }
@@ -2954,6 +2956,7 @@ textarea.w-input, textarea.w-select {
 /* welcome container meow*/
   .container-4 {
     width: 650px;
+    padding-top: 10px;
     left: 50%;
     transform: translateX(-50%);
     right: auto;
@@ -3099,7 +3102,7 @@ textarea.w-input, textarea.w-select {
   }
 
   .container-5 {
-    width: 354px;
+    width: 0px;
   }
 
   .quick-stack-3 {
@@ -3284,11 +3287,13 @@ textarea.w-input, textarea.w-select {
 /* ===== ABSURD PAGE SPECIFIC SIZES ===== */
 /* Page ID: 69fd9ebabeddd5210b8a8e7d */
 html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .body {
-  height: 4300px; /* ABSURD PAGE: Adjust page height here - should be container height + 300px buffer */
+
+  height: 5250px; /* ABSURD PAGE: Adjust page height here - should be container height + 300px buffer */
 }
 
 html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
-  height: 4000px; /* ABSURD PAGE CONTAINER: Adjust height here, then update .body height above */
+  margin-top: 20px;
+  height: 3000px; /* ABSURD PAGE CONTAINER: Adjust height here, then update .body height above */
 }
 
 /* Tablet/Medium responsive for absurd page */
@@ -3298,6 +3303,7 @@ html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
   }
 
   html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
+    margin-top: 20px;
     height: 4000px; /* ABSURD PAGE CONTAINER TABLET: Adjust container height for tablets */
   }
 }
@@ -3309,6 +3315,7 @@ html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
   }
 
   html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
+    margin-top: 20px;
     height: 3400px; /* ABSURD PAGE CONTAINER SMALL: Adjust container height for small devices */
   }
 }
@@ -3320,6 +3327,687 @@ html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
   }
 
   html[data-wf-page="69fd9ebabeddd5210b8a8e7d"] .div-block {
+    margin-top: 20px;
     height: 4600px; /* ABSURD PAGE CONTAINER MOBILE: Adjust container height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: INDEX ===== */
+body.page-index .body {
+  height: 1500px; /* MAIN PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-index .div-block {
+  height: 1150px; /* MAIN PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-index .body {
+    height: 1400px; /* MAIN PAGE TABLET: Adjust page height */
+  }
+
+  body.page-index .div-block {
+    height: 1150px; /* MAIN PAGE CONTAINER TABLET: Adjust height */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-index .body {
+    height: 1500px; /* MAIN PAGE SMALL: Adjust height for smaller devices */
+  }
+
+  body.page-index .div-block {
+    height: 1200px; /* MAIN PAGE CONTAINER SMALL: Adjust height for smaller devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-index .body {
+    height: 3400px; /* MAIN PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-index .div-block {
+    height: 3200px; /* MAIN PAGE CONTAINER MOBILE: Adjust height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: INDEX2 ===== */
+body.page-index2 .body {
+  height: 1500px; /* INDEX2 PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-index2 .div-block {
+  height: 1150px; /* INDEX2 PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-index2 .body {
+    height: 1400px; /* INDEX2 PAGE TABLET: Adjust page height */
+  }
+
+  body.page-index2 .div-block {
+    height: 1150px; /* INDEX2 PAGE CONTAINER TABLET: Adjust height */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-index2 .body {
+    height: 1500px; /* INDEX2 PAGE SMALL: Adjust height for smaller devices */
+  }
+
+  body.page-index2 .div-block {
+    height: 1200px; /* INDEX2 PAGE CONTAINER SMALL: Adjust height for smaller devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-index2 .body {
+    height: 3400px; /* INDEX2 PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-index2 .div-block {
+    height: 3200px; /* INDEX2 PAGE CONTAINER MOBILE: Adjust height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: ABSURD ===== */
+body.page-absurd .body {
+  height: 3250px; /* ABSURD PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-absurd .div-block {
+  margin-top: 20px;
+  height: 3000px; /* ABSURD PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-absurd .body {
+    height: 4300px; /* ABSURD PAGE TABLET: Adjust height for tablets */
+  }
+
+  body.page-absurd .div-block {
+    margin-top: 20px;
+    height: 4000px; /* ABSURD PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-absurd .body {
+    height: 3700px; /* ABSURD PAGE SMALL: Adjust height for small devices */
+  }
+
+  body.page-absurd .div-block {
+    margin-top: 20px;
+    height: 3400px; /* ABSURD PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-absurd .body {
+    height: 4900px; /* ABSURD PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-absurd .div-block {
+    margin-top: 20px;
+    height: 4600px; /* ABSURD PAGE CONTAINER MOBILE: Adjust container height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: LEAK ===== */
+body.page-leak .body {
+  height: 3250px; /* LEAK PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-leak .div-block {
+  margin-top: 20px;
+  height: 1900px; /* LEAK PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-leak .body {
+    height: 4300px; /* LEAK PAGE TABLET: Adjust height for tablets */
+  }
+
+  body.page-leak .div-block {
+    margin-top: 20px;
+    height: 4000px; /* LEAK PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-leak .body {
+    height: 3700px; /* LEAK PAGE SMALL: Adjust height for small devices */
+  }
+
+  body.page-leak .div-block {
+    margin-top: 20px;
+    height: 3400px; /* LEAK PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-leak .body {
+    height: 4900px; /* LEAK PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-leak .div-block {
+    margin-top: 20px;
+    height: 4600px; /* LEAK PAGE CONTAINER MOBILE: Adjust container height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: LITTLE THINGS ===== */
+body.page-little-things .body {
+  height: 1950px; /* LITTLE THINGS PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-little-things .div-block {
+  margin-top: 20px;
+  height: 1700px; /* LITTLE THINGS PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-little-things .body {
+    height: 2300px; /* LITTLE THINGS PAGE TABLET: Adjust height for tablets */
+  }
+
+  body.page-little-things .div-block {
+    margin-top: 20px;
+    height: 2000px; /* LITTLE THINGS PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-little-things .body {
+    height: 1900px; /* LITTLE THINGS PAGE SMALL: Adjust height for small devices */
+  }
+
+  body.page-little-things .div-block {
+    margin-top: 20px;
+    height: 1600px; /* LITTLE THINGS PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-little-things .body {
+    height: 1900px; /* LITTLE THINGS PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-little-things .div-block {
+    margin-top: 20px;
+    height: 1600px; /* LITTLE THINGS PAGE CONTAINER MOBILE: Adjust container height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: NOT THE STARS ===== */
+body.page-not-the-stars .body {
+  height: 3250px; /* NOT THE STARS PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-not-the-stars .div-block {
+  margin-top: 20px;
+  height: 1350px; /* NOT THE STARS PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-not-the-stars .body {
+    height: 4300px; /* NOT THE STARS PAGE TABLET: Adjust height for tablets */
+  }
+
+  body.page-not-the-stars .div-block {
+    margin-top: 20px;
+    height: 4000px; /* NOT THE STARS PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-not-the-stars .body {
+    height: 3700px; /* NOT THE STARS PAGE SMALL: Adjust height for small devices */
+  }
+
+  body.page-not-the-stars .div-block {
+    margin-top: 20px;
+    height: 3400px; /* NOT THE STARS PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-not-the-stars .body {
+    height: 4900px; /* NOT THE STARS PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-not-the-stars .div-block {
+    margin-top: 20px;
+    height: 4600px; /* NOT THE STARS PAGE CONTAINER MOBILE: Adjust container height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: TO BE HEARD ===== */
+body.page-to-be-heard .body {
+  height: 3250px; /* TO BE HEARD PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-to-be-heard .div-block {
+  margin-top: 20px;
+  height: 1100px; /* TO BE HEARD PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-to-be-heard .body {
+    height: 4300px; /* TO BE HEARD PAGE TABLET: Adjust height for tablets */
+  }
+
+  body.page-to-be-heard .div-block {
+    margin-top: 20px;
+    height: 4000px; /* TO BE HEARD PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-to-be-heard .body {
+    height: 3700px; /* TO BE HEARD PAGE SMALL: Adjust height for small devices */
+  }
+
+  body.page-to-be-heard .div-block {
+    margin-top: 20px;
+    height: 3400px; /* TO BE HEARD PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-to-be-heard .body {
+    height: 4900px; /* TO BE HEARD PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-to-be-heard .div-block {
+    margin-top: 20px;
+    height: 4600px; /* TO BE HEARD PAGE CONTAINER MOBILE: Adjust container height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: POEMS POETS ===== */
+body.page-poems-poets .body {
+  height: 3250px; /* POEMS POETS PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-poems-poets .div-block {
+  margin-top: 20px;
+  height: 3000px; /* POEMS POETS PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-poems-poets .body {
+    height: 4300px; /* POEMS POETS PAGE TABLET: Adjust height for tablets */
+  }
+
+  body.page-poems-poets .div-block {
+    margin-top: 20px;
+    height: 4000px; /* POEMS POETS PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-poems-poets .body {
+    height: 3700px; /* POEMS POETS PAGE SMALL: Adjust height for small devices */
+  }
+
+  body.page-poems-poets .div-block {
+    margin-top: 20px;
+    height: 3400px; /* POEMS POETS PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-poems-poets .body {
+    height: 4900px; /* POEMS POETS PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-poems-poets .div-block {
+    margin-top: 20px;
+    height: 4600px; /* POEMS POETS PAGE CONTAINER MOBILE: Adjust container height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: BETTER PERSON ===== */
+body.page-better-person .body {
+  height: 3250px; /* BETTER PERSON PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-better-person .div-block {
+  margin-top: 20px;
+  height: 1150px; /* BETTER PERSON PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-better-person .body {
+    height: 4300px; /* BETTER PERSON PAGE TABLET: Adjust height for tablets */
+  }
+
+  body.page-better-person .div-block {
+    margin-top: 20px;
+    height: 4000px; /* BETTER PERSON PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-better-person .body {
+    height: 3700px; /* BETTER PERSON PAGE SMALL: Adjust height for small devices */
+  }
+
+  body.page-better-person .div-block {
+    margin-top: 20px;
+    height: 3400px; /* BETTER PERSON PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-better-person .body {
+    height: 4900px; /* BETTER PERSON PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-better-person .div-block {
+    margin-top: 20px;
+    height: 4600px; /* BETTER PERSON PAGE CONTAINER MOBILE: Adjust container height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: BLUES REDS ===== */
+body.page-blues-reds .body {
+  height: 3250px; /* BLUES REDS PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-blues-reds .div-block {
+  margin-top: 20px;
+  height: 1070px; /* BLUES REDS PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-blues-reds .body {
+    height: 4300px; /* BLUES REDS PAGE TABLET: Adjust height for tablets */
+  }
+
+  body.page-blues-reds .div-block {
+    margin-top: 20px;
+    height: 4000px; /* BLUES REDS PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-blues-reds .body {
+    height: 3700px; /* BLUES REDS PAGE SMALL: Adjust height for small devices */
+  }
+
+  body.page-blues-reds .div-block {
+    margin-top: 20px;
+    height: 3400px; /* BLUES REDS PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-blues-reds .body {
+    height: 4900px; /* BLUES REDS PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-blues-reds .div-block {
+    margin-top: 20px;
+    height: 4600px; /* BLUES REDS PAGE CONTAINER MOBILE: Adjust container height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: PLEA ===== */
+body.page-plea .body {
+  height: 3250px; /* PLEA PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-plea .div-block {
+  margin-top: 20px;
+  height: 1040px; /* PLEA PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-plea .body {
+    height: 4300px; /* PLEA PAGE TABLET: Adjust height for tablets */
+  }
+
+  body.page-plea .div-block {
+    margin-top: 20px;
+    height: 4000px; /* PLEA PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-plea .body {
+    height: 3700px; /* PLEA PAGE SMALL: Adjust height for small devices */
+  }
+
+  body.page-plea .div-block {
+    margin-top: 20px;
+    height: 3400px; /* PLEA PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-plea .body {
+    height: 4900px; /* PLEA PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-plea .div-block {
+    margin-top: 20px;
+    height: 4600px; /* PLEA PAGE CONTAINER MOBILE: Adjust container height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: ONE SEAT ===== */
+body.page-one-seat .body {
+  height: 3250px; /* ONE SEAT PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-one-seat .div-block {
+  margin-top: 20px;
+  height: 1350px; /* ONE SEAT PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-one-seat .body {
+    height: 4300px; /* ONE SEAT PAGE TABLET: Adjust height for tablets */
+  }
+
+  body.page-one-seat .div-block {
+    margin-top: 20px;
+    height: 4000px; /* ONE SEAT PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-one-seat .body {
+    height: 3700px; /* ONE SEAT PAGE SMALL: Adjust height for small devices */
+  }
+
+  body.page-one-seat .div-block {
+    margin-top: 20px;
+    height: 3400px; /* ONE SEAT PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-one-seat .body {
+    height: 4900px; /* ONE SEAT PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-one-seat .div-block {
+    margin-top: 20px;
+    height: 4600px; /* ONE SEAT PAGE CONTAINER MOBILE: Adjust container height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: WHOM ===== */
+body.page-whom .body {
+  height: 1250px; /* WHOM PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-whom .div-block {
+  margin-top: 20px;
+  height: 1000px; /* WHOM PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-whom .body {
+    height: 4300px; /* WHOM PAGE TABLET: Adjust height for tablets */
+  }
+
+  body.page-whom .div-block {
+    margin-top: 20px;
+    height: 4000px; /* WHOM PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-whom .body {
+    height: 3700px; /* WHOM PAGE SMALL: Adjust height for small devices */
+  }
+
+  body.page-whom .div-block {
+    margin-top: 20px;
+    height: 3400px; /* WHOM PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-whom .body {
+    height: 4900px; /* WHOM PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-whom .div-block {
+    margin-top: 20px;
+    height: 4600px; /* WHOM PAGE CONTAINER MOBILE: Adjust container height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: WHORE ===== */
+body.page-whore .body {
+  height: 3250px; /* WHORE PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-whore .div-block {
+  margin-top: 20px;
+  height: 1500px; /* WHORE PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-whore .body {
+    height: 4300px; /* WHORE PAGE TABLET: Adjust height for tablets */
+  }
+
+  body.page-whore .div-block {
+    margin-top: 20px;
+    height: 4000px; /* WHORE PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-whore .body {
+    height: 3700px; /* WHORE PAGE SMALL: Adjust height for small devices */
+  }
+
+  body.page-whore .div-block {
+    margin-top: 20px;
+    height: 3400px; /* WHORE PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-whore .body {
+    height: 4900px; /* WHORE PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-whore .div-block {
+    margin-top: 20px;
+    height: 4600px; /* WHORE PAGE CONTAINER MOBILE: Adjust container height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: ANOTHERS ===== */
+body.page-anothers .body {
+  height: 5250px; /* ANOTHERS PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-anothers .div-block {
+  margin-top: 20px;
+  height: 4500px; /* ANOTHERS PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-anothers .body {
+    height: 4300px; /* ANOTHERS PAGE TABLET: Adjust height for tablets */
+  }
+
+  body.page-anothers .div-block {
+    margin-top: 20px;
+    height: 4000px; /* ANOTHERS PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-anothers .body {
+    height: 3700px; /* ANOTHERS PAGE SMALL: Adjust height for small devices */
+  }
+
+  body.page-anothers .div-block {
+    margin-top: 20px;
+    height: 3400px; /* ANOTHERS PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-anothers .body {
+    height: 4900px; /* ANOTHERS PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-anothers .div-block {
+    margin-top: 20px;
+    height: 4600px; /* ANOTHERS PAGE CONTAINER MOBILE: Adjust container height for mobile */
+  }
+}
+
+/* ===== PAGE-SPECIFIC SIZES: OVERFLOW ===== */
+body.page-overflow .body {
+  height: 3250px; /* OVERFLOW PAGE: Adjust page height here - should be container height + 300px buffer */
+}
+
+body.page-overflow .div-block {
+  margin-top: 20px;
+  height: 3000px; /* OVERFLOW PAGE CONTAINER: Adjust height here, then update .body height above */
+}
+
+@media screen and (max-width: 991px) {
+  body.page-overflow .body {
+    height: 4300px; /* OVERFLOW PAGE TABLET: Adjust height for tablets */
+  }
+
+  body.page-overflow .div-block {
+    margin-top: 20px;
+    height: 4000px; /* OVERFLOW PAGE CONTAINER TABLET: Adjust container height for tablets */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.page-overflow .body {
+    height: 3700px; /* OVERFLOW PAGE SMALL: Adjust height for small devices */
+  }
+
+  body.page-overflow .div-block {
+    margin-top: 20px;
+    height: 3400px; /* OVERFLOW PAGE CONTAINER SMALL: Adjust container height for small devices */
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body.page-overflow .body {
+    height: 4900px; /* OVERFLOW PAGE MOBILE: Adjust height for mobile */
+  }
+
+  body.page-overflow .div-block {
+    margin-top: 20px;
+    height: 4600px; /* OVERFLOW PAGE CONTAINER MOBILE: Adjust container height for mobile */
   }
 }

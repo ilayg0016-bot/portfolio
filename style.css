@@ -2469,8 +2469,8 @@ textarea.w-input, textarea.w-select {
   grid-template-rows: auto auto;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
-  width: 744px;
-  height: 100px;
+  width: 0px;
+  height: 0px;
   margin-left: auto;
   margin-right: auto;
   font-weight: 400;
@@ -2783,7 +2783,7 @@ textarea.w-input, textarea.w-select {
     z-index: 100;
     opacity: .59;
     mix-blend-mode: multiply;
-    width: 200px;
+    width: 000px;
     position: absolute;
     top: 340px;
     left: 14px;
@@ -3085,7 +3085,7 @@ textarea.w-input, textarea.w-select {
   }
 
   .container-5 {
-    width: 354px;
+    width: 0px;
   }
 
   .quick-stack-3 {
