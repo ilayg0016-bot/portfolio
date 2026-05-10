@@ -2598,6 +2598,7 @@ poiner-events: none;
   left: 28px;
   top: 340px;
 }
+
 /*squiggle*/
 .image-5 {
   z-index: 100;
@@ -2842,14 +2843,7 @@ poiner-events: none;
   }
 
 /*index squiggle*/
-.image-6 {
-  z-index: 100;
-  mix-blend-mode: multiply;
-  width: 200px;
-  position: absolute;
-  top: 93px;
-  left: 23px;
-}
+
 /* squiggle second stuff */
   .image-5 {
     z-index: 100;
