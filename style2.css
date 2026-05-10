@@ -1040,6 +1040,13 @@ textarea.w-input, textarea.w-select {
   display: inline-block;
   position: relative;
 }
+/*outline*/
+
+input:focus, textarea:focus {
+  outline: #ffdae8; /* Removes the default blue ring */
+  border-color: #ffdae8; /* Changes the border color */
+  box-shadow: 0 0 8px rgba(219, 91, 145, 0.8); /* Adds a soft glow */
+}
 
 .w-widget-twitter-count-shim * {
   pointer-events: none;
